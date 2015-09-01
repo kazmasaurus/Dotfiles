@@ -4,9 +4,14 @@
 
 - link: 
 
-    # Git 
-    ~/.gitignore: git/config/.gitignore
-    ~/.gitconfig: git/config/.gitconfig
+    # git
+    ~/.config/git/ignore:
+        create: true
+        path: git/config/.gitignore
+
+    ~/.config/git/config:
+        create: true
+        path: git/config/.gitconfig
 
 - shell:
 
