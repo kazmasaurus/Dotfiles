@@ -46,8 +46,8 @@
     #### fish ####
     # Add fish to the allowed shells
     -
-        - "cat /etc/shells | grep local/bin/fish || echo $(which fish) | sudo tee -a /etc/shells"
+        - "cat /etc/shells | grep $(which fish) || echo $(which fish) | sudo tee -a /etc/shells"
         - Ensure fish can shell
     -
-        - "echo $SHELL | grep local/bin/fish || chsh -s $(which fish)"
-        - Set fish to shell
+        - "echo $SHELL | grep $(which fish) || chsh -s $(which fish)"
+        - Set fish as shell
