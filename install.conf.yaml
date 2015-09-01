@@ -11,6 +11,7 @@
 - shell:
 
     # Get Homebrew setup
-    - ['brew --version || ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"', Installing Homebrew]
-
+    - 
+        - 'brew --version || ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
+        - Installing Homebrew
 
