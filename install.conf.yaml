@@ -4,6 +4,11 @@
 
 - link: 
 
+    # fish
+    ~/.config/fish/config.fish:
+        create: true
+        path: fish/config.fish
+
     # git
     ~/.config/git/ignore:
         create: true
@@ -37,7 +42,6 @@
         description: Install _All_ the brewlings!
         stdout: true
         stderr: true
-
 
     #### fish ####
     # Add fish to the allowed shells
