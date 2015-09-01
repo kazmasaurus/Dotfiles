@@ -1,3 +1,7 @@
 # Syntax can be found at https://github.com/anishathalye/dotbot
 
 - clean: ['~']
+
+- link: 
+    "~/.gitignore": "git/config/.gitignore"
+    "~/.gitconfig": "git/config/.gitconfig"
