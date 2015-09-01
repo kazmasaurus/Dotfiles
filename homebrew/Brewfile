@@ -1,0 +1,12 @@
+
+# For all your shelly swimmings
+brew "fish"
+
+# Basic dev toolkit
+brew "cloc"
+brew "git"
+brew "hub"
+
+# iOS dev tools
+brew "carthage"
+brew "liftoff"

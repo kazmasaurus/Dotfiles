@@ -13,5 +13,14 @@
     # Get Homebrew setup
     - 
         - 'brew --version || ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
-        - Installing Homebrew
+        - Install Homebrew
+    -
+        - "brew tap homebrew/bundle"
+        - Install Brewfileabilityness
 
+    # Install _All_ the things!
+    - 
+        command: "brew bundle --file=homebrew/Brewfile"
+        description: Install _All_ the brewlings!
+        stdout: true
+        stderr: true
