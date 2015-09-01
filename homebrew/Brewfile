@@ -6,6 +6,7 @@ brew "fish"
 brew "cloc"
 brew "git"
 brew "hub"
+brew "vim"
 
 # iOS dev tools
 brew "carthage"
