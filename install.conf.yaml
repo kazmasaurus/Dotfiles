@@ -8,3 +8,9 @@
     ~/.gitignore: git/config/.gitignore
     ~/.gitconfig: git/config/.gitconfig
 
+- shell:
+
+    # Get Homebrew setup
+    - ['brew --version || ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"', Installing Homebrew]
+
+
