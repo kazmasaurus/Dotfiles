@@ -32,3 +32,13 @@
         description: Install _All_ the brewlings!
         stdout: true
         stderr: true
+
+
+    #### fish ####
+    # Add fish to the allowed shells
+    -
+        - "cat /etc/shells | grep local/bin/fish || echo $(which fish) | sudo tee -a /etc/shells"
+        - Ensure fish can shell
+    -
+        - "echo $SHELL | grep local/bin/fish || chsh -s $(which fish)"
+        - Set fish to shell
