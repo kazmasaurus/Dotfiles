@@ -3,5 +3,8 @@
 - clean: ['~']
 
 - link: 
-    "~/.gitignore": "git/config/.gitignore"
-    "~/.gitconfig": "git/config/.gitconfig"
+
+    # Git 
+    ~/.gitignore: git/config/.gitignore
+    ~/.gitconfig: git/config/.gitconfig
+
