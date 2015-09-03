@@ -18,7 +18,18 @@
         create: true
         path: git/config/.gitconfig
 
+    # Xcode
+    ~/Library/Preferences/com.apple.dt.Xcode.plist:
+        create: true
+        path: Xcode/com.apple.dt.Xcode.plist
+
 - shell:
+
+    #### Plist cache nuke ####
+    # Nukes the plist cache so that anything set in link will get correctly read
+    - 
+        - killall -u zak cfprefsd
+        - Nuke plist cache
 
     #### Homebrew ####
     # Get Homebrew setup
