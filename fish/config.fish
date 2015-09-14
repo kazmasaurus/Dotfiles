@@ -2,6 +2,11 @@
 # Wrap hub in `git`
 eval (hub alias -s)
 
+# Xcode aliases
+alias x 'open . -a "Xcode"'
+alias xb 'open . -a "Xcode-beta"'
+alias xo 'open . -a "Xcode-old-shit"'
+
 # Thanks Schwa! https://gist.github.com/schwa/92413257ccca89766493
 function xcode-toggle \
     -d "Toggles the version Xcode that xcode-build points to."
