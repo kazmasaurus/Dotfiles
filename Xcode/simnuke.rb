@@ -21,8 +21,8 @@ device_types.each do |device_type|
   runtimes.each do |runtime|
     next if !(device_type[0] =~ /[wW]atch/).nil? ^ !(runtime[0] =~ /[wW]atch/).nil?
     puts "Creating #{device_type[0]} with #{runtime[0]}"
-    command = "xcrun simctl create '#{device_type[0]}' #{device_type[1]} #{runtime[1]} 2> /dev/null"
-    # puts "Command: #{command}"
+    command = "xcrun simctl create '#{device_type[0]}' #{device_type[1]} #{runtime[1]}"
+    puts "Command: #{command}"
     command_output = `#{command}`
     sleep 0.5
   end
