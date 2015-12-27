@@ -2,10 +2,16 @@
 # Wrap hub in `git`
 eval (hub alias -s)
 
+# Git aliases
+alias gh 'git log --graph --oneline --decorate'
+
 # Xcode aliases
 alias x 'open . -a "Xcode"'
 alias xb 'open . -a "Xcode-beta"'
 alias xo 'open . -a "Xcode-old-shit"'
+
+# Path party
+set PATH "/usr/local/sbin" $PATH
 
 # Thanks Schwa! https://gist.github.com/schwa/92413257ccca89766493
 function xcode-toggle \
