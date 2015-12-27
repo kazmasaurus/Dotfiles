@@ -1,4 +1,6 @@
 
+# Documentation: https://github.com/Homebrew/homebrew-bundle
+
 # For all your shelly swimmings
 brew "fish"
 
@@ -7,6 +9,9 @@ brew "cloc"
 brew "git"
 brew "hub"
 brew "vim"
+
+tap "tldr-pages/tldr"
+brew "tldr"
 
 # iOS dev tools
 brew "carthage"
