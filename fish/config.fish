@@ -4,6 +4,8 @@ eval (hub alias -s)
 
 # Git aliases
 alias gg 'git status'
+alias gd 'git diff'
+alias gdd 'git difftool'
 alias gh 'git log --graph --oneline --decorate'
 
 # Xcode aliases
