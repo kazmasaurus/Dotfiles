@@ -18,6 +18,11 @@
         create: true
         path: git/config/.gitconfig
 
+    # vim
+    ~/.vimrc:
+        create: true
+        path: vim/.vimrc
+
     # Xcode
     ~/Library/Preferences/com.apple.dt.Xcode.plist:
         create: true
@@ -54,6 +59,13 @@
         stdout: true
         stderr: true
 
+    # Link the apps.
+    -
+        command: brew linkapps
+        description: Link any brewed `/Application`s
+        stdout: true
+        stdout: true
+
     #### fish ####
     # Add fish to the allowed shells
     -
@@ -62,3 +74,4 @@
     -
         - "echo $SHELL | grep $(which fish) || chsh -s $(which fish)"
         - Set fish as shell
+

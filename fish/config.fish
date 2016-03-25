@@ -15,6 +15,13 @@ alias x 'open . -a "Xcode"'
 alias xb 'open . -a "Xcode-beta"'
 alias xo 'open . -a "Xcode-old-shit"'
 
+# Easy vim
+alias nim 'open -a Neovim'
+alias mim 'mvim'
+
+# Muscle memory dies hard
+alias mate 'mvim'
+
 # Path party
 set PATH "/usr/local/sbin" $PATH
 

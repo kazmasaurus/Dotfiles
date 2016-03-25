@@ -13,6 +13,12 @@ brew "vim"
 tap "tldr-pages/tldr"
 brew "tldr"
 
+# Apps 
+# Note: You'll need to `brew linkapps` when you're done
+#	This should be done by the install script though.
+brew "macvim"
+
 # iOS dev tools
 brew "carthage"
 brew "liftoff"
+
