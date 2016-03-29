@@ -86,6 +86,17 @@ if &shell =~# 'fish$'
 endif
 " }}}
 
+" Plugins {{{
+call plug#begin()
+
+" Navigation
+
+" NERD tree will be loaded on the first invocation of NERDTreeToggle command
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+
+call plug#end()
+" }}}
+
 " Put all temporary files under the same directory.
 " https://github.com/mhinz/vim-galore#handling-backup-swap-undo-and-viminfo-files
 "set backup

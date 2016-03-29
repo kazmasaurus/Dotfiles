@@ -2,6 +2,12 @@
 
 - clean: ['~']
 
+# We need these first incase we need to link against any of them.
+- shell:
+  -
+    - git submodule update --init --recursive
+    - Installing submodules
+
 - link: 
 
     # fish
@@ -15,13 +21,17 @@
         path: git/config/.gitignore
 
     ~/.config/git/config:
-        create: true
+        create: true:
         path: git/config/.gitconfig
 
     # vim
     ~/.vimrc:
         create: true
         path: vim/.vimrc
+
+    ~/.vim/autoload/plug.vim:
+        create: true
+        path: vim/vim-plug/plug.vim
 
     # Xcode
     ~/Library/Preferences/com.apple.dt.Xcode.plist:
@@ -40,10 +50,10 @@
     # Get Homebrew setup
     -
         - 'brew --version || ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
-        - Install Homebrew
+        - Installing Homebrew
     -
         - "brew tap homebrew/bundle"
-        - Install Brewfileabilityness
+        - Installing Brewfileabilityness
 
     # Update Homebrew if we're just touching up
     -
