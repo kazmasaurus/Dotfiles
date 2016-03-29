@@ -24,6 +24,13 @@ set shiftwidth  =4         " >> indents by 4 spaces.
 set shiftround             " >> indents to next multiple of 'shiftwidth'.
 " }}}
 
+" Code Folding {{{
+augroup filetype_vim
+    autocmd!
+    autocmd FileType vim setlocal foldmethod=marker
+augroup END
+" }}}
+
 " Visual Code {{{
 syntax on                  " Enable syntax highlighting.
 set display  =lastline     " Show as much as possible of the last line.
