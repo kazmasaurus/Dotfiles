@@ -1,5 +1,9 @@
 # Syntax can be found at https://github.com/anishathalye/dotbot
 
+- defaults:
+    link:
+      create: true
+
 - clean: ['~']
 
 # We need these first incase we need to link against any of them.
@@ -11,32 +15,18 @@
 - link: 
 
     # fish
-    ~/.config/fish/config.fish:
-        create: true
-        path: fish/config.fish
+    ~/.config/fish/config.fish: fish/config.fish
 
     # git
-    ~/.config/git/ignore:
-        create: true
-        path: git/config/.gitignore
-
-    ~/.config/git/config:
-        create: true:
-        path: git/config/.gitconfig
+    ~/.config/git/ignore: git/config/.gitignore
+    ~/.config/git/config: git/config/.gitconfig
 
     # vim
-    ~/.vimrc:
-        create: true
-        path: vim/.vimrc
-
-    ~/.vim/autoload/plug.vim:
-        create: true
-        path: vim/vim-plug/plug.vim
+    ~/.vimrc: vim/.vimrc
+    ~/.vim/autoload/plug.vim: vim/vim-plug/plug.vim
 
     # Xcode
-    ~/Library/Preferences/com.apple.dt.Xcode.plist:
-        create: true
-        path: Xcode/com.apple.dt.Xcode.plist
+    ~/Library/Preferences/com.apple.dt.Xcode.plist: Xcode/com.apple.dt.Xcode.plist
 
 - shell:
 
