@@ -1,49 +1,32 @@
 # Syntax can be found at https://github.com/anishathalye/dotbot
 
+# Meta defaults we want everywhere
 - defaults:
     link:
-      create: true
+        create: true
 
 - clean: ['~']
 
-# We need these first incase we need to link against any of them.
+### vim ###
 - shell:
-  -
-    - git submodule update --init --recursive
-    - Installing submodules
+    -
+        command: git submodule update --init --recursive "vim/vim-plug"
+        description: Installing vim-plug
 
-- link: 
-
-    # fish
-    ~/.config/fish/config.fish: fish/config.fish
-
-    # git
-    ~/.config/git/ignore: git/config/.gitignore
-    ~/.config/git/config: git/config/.gitconfig
-
-    # vim
+- link:
     ~/.vimrc: vim/.vimrc
     ~/.vim/autoload/plug.vim: vim/vim-plug/plug.vim
 
-    # Xcode
-    ~/Library/Preferences/com.apple.dt.Xcode.plist: Xcode/com.apple.dt.Xcode.plist
-
+#### Homebrew ####
 - shell:
 
-    #### Plist cache nuke ####
-    # Nukes the plist cache so that anything set in link will get correctly read
-    - 
-        - killall -u zak cfprefsd
-        - Nuke plist cache
-
-    #### Homebrew ####
     # Get Homebrew setup
     -
-        - 'brew --version || ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
-        - Installing Homebrew
+        command: 'brew --version || ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
+        description: Installing Homebrew
     -
-        - "brew tap homebrew/bundle"
-        - Installing Brewfileabilityness
+        command: "brew tap homebrew/bundle"
+        description: Installing Brewfileabilityness
 
     # Update Homebrew if we're just touching up
     -
@@ -64,14 +47,33 @@
         command: brew linkapps
         description: Link any brewed `/Application`s
         stdout: true
-        stdout: true
+        stderr: true
 
-    #### fish ####
+#### fish ####
+- link:
+    ~/.config/fish/config.fish: fish/config.fish
+
+- shell:
     # Add fish to the allowed shells
     -
-        - "cat /etc/shells | grep $(which fish) || echo $(which fish) | sudo tee -a /etc/shells"
-        - Ensure fish can shell
+        command: "cat /etc/shells | grep $(which fish) || echo $(which fish) | sudo tee -a /etc/shells"
+        description: Ensure fish can shell
     -
-        - "echo $SHELL | grep $(which fish) || chsh -s $(which fish)"
-        - Set fish as shell
+        command: "echo $SHELL | grep $(which fish) || chsh -s $(which fish)"
+        description: Set fish as shell
+
+#### git ####
+- link:
+    ~/.config/git/ignore: git/config/.gitignore
+    ~/.config/git/config: git/config/.gitconfig
+
+#### Xcode ####
+- link:
+    ~/Library/Preferences/com.apple.dt.Xcode.plist: Xcode/com.apple.dt.Xcode.plist
+
+- shell:
+    # Nukes the plist cache so that anything set in link will get correctly read
+    -
+        - killall -u zak cfprefsd
+        - Nuke plist cache
 
