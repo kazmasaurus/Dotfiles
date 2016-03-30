@@ -42,6 +42,19 @@ Thumbs.db
 xcuserdata
 profile
 
+# Vim #
+#######
+# swap
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+# session
+Session.vim
+# temporary
+.netrwhist
+*~
+# auto-generated tag files
+tags
+
 # Clojure Stuff #
 #################
 .lein-*
