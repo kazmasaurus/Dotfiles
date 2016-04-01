@@ -7,14 +7,15 @@
 
 - clean: ['~']
 
+
+  
 ### vim ###
 - shell:
-    -
-        command: git submodule update --init --recursive "vim/vim-plug"
-        description: Installing vim-plug
-
+    - [git submodule update --init --recursive "vim/vim-plug", Installing vim-plug]
 - link:
     ~/.vimrc: vim/.vimrc
+    ~/.vim/ftplugin: vim/ftplugin
+    ~/.vim/ftdetect: vim/ftdetect
     ~/.vim/autoload/plug.vim: vim/vim-plug/plug.vim
 
 #### Homebrew ####
