@@ -8,6 +8,7 @@
 [core]
 	autoclrf = true
 	excludesfile = /Users/Zak/.config/git/ignore
+	editor = mvim -f
 [difftool "Kaleidoscope"]
 	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 [diff]
