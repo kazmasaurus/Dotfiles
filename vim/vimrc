@@ -6,10 +6,11 @@ call plug#begin()
 
 " Themes
 Plug 'altercation/vim-colors-solarized'
+Plug 'reedes/vim-colors-pencil'
+Plug 'noahfrederick/vim-hemisu'
 
 " Other display stuff
 Plug 'nathanaelkane/vim-indent-guides'
-let g:indent_guides_color_change_percent=1
 
 " Editing tools
 Plug 'thirtythreeforty/lessspace.vim'
@@ -17,6 +18,21 @@ Plug 'scrooloose/nerdcommenter'
 nnoremap <D-/> <leader>c<space>
 inoremap <D-/> <leader>c<space>
 vnoremap <D-/> <leader>c<space>
+let g:NERDCustomDelimiters = { 'raml': { 'left': '#' } }
+let g:NERDSpaceDelims = 1
+
+function! BuildYCM(info)
+  " info is a dictionary with 3 fields
+  " - name:   name of the plugin
+  " - status: 'installed', 'updated', or 'unchanged'
+  " - force:  set on PlugInstall! or PlugUpdate!
+  if a:info.status == 'installed' || a:info.force
+    !./install.py
+  endif
+endfunction
+
+Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
+autocmd! User YouCompleteMe if !has('vim_starting') | call youcompleteme#Enable() | endif
 
 " Navigation
 Plug 'ctrlpvim/ctrlp.vim', { 'on': 'CtrlP' }
@@ -33,6 +49,7 @@ noremap <D-1> :NERDTreeToggle<CR>
 " Syntax
 Plug 'keith/swift.vim', { 'for': 'swift' }
 Plug 'in3d/vim-raml', { 'for': 'raml' }
+Plug 'darfink/vim-plist', { 'for': 'plist' }
 
 call plug#end()
 " }}}
@@ -77,11 +94,6 @@ syntax on                  " Enable syntax highlighting.
 set display  =lastline     " Show as much as possible of the last line.
 set cursorline             " Find the current line quickly.
 
-if has('gui_running')
-    colorscheme solarized
-    set background=dark
-endif
-
 set incsearch              " Highlight while searching with / or ?.
 
 set list                   " Show non-printable characters.
@@ -93,6 +105,11 @@ endif
 
 if has('gui_running')
     set guifont=Source\ Code\ Pro:h12
+endif
+
+if has('gui_running')
+    colorscheme default
+    set background=light
 endif
 " }}}
 
