@@ -25,6 +25,9 @@ alias mate 'mvim'
 # Path party
 set PATH "/usr/local/sbin" $PATH
 
+# Shim in `rbenv`
+status --is-interactive; and . (rbenv init -|psub)
+
 # Thanks Schwa! https://gist.github.com/schwa/92413257ccca89766493
 function xcode-toggle \
     -d "Toggles the version Xcode that xcode-build points to."
