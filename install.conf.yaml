@@ -4,11 +4,14 @@
 - defaults:
     link:
         create: true
+        force: true
 
 - clean: ['~']
 
+### Mackup ###
+- link:
+    ~/.mackup.cfg: mackup/mackup.cfg
 
-  
 ### vim ###
 - shell:
     - [git submodule update --init --recursive "vim/vim-plug", Installing vim-plug]
