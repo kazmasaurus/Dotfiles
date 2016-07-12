@@ -20,5 +20,4 @@ brew "macvim"
 
 # iOS dev tools
 brew "carthage"
-brew "liftoff"
 
