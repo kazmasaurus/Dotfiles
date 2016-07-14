@@ -30,9 +30,6 @@ let g:ctrlp_prompt_mappings = {
     \ 'PrtClear()': ['<c-w>', '<d-bs>']
     \ }
 
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-noremap <D-1> :NERDTreeToggle<CR>
-
 " Syntax
 Plug 'keith/swift.vim', { 'for': 'swift' }
 Plug 'in3d/vim-raml', { 'for': 'raml' }
