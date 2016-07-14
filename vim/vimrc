@@ -21,9 +21,6 @@ vnoremap <D-/> <leader>c<space>
 let g:NERDCustomDelimiters = { 'raml': { 'left': '#' } }
 let g:NERDSpaceDelims = 1
 
-Plug 'Valloric/YouCompleteMe', { 'do': './install' }
-autocmd! User YouCompleteMe if !has('vim_starting') | call youcompleteme#Enable() | endif
-
 " Navigation
 Plug 'ctrlpvim/ctrlp.vim', { 'on': 'CtrlP' }
 noremap <D-R> :CtrlP<CR>
