@@ -21,9 +21,6 @@ vnoremap <D-/> <leader>c<space>
 let g:NERDCustomDelimiters = { 'raml': { 'left': '#' } }
 let g:NERDSpaceDelims = 1
 
-Plug 'Valloric/YouCompleteMe', { 'do': './install' }
-autocmd! User YouCompleteMe if !has('vim_starting') | call youcompleteme#Enable() | endif
-
 " Navigation
 Plug 'ctrlpvim/ctrlp.vim', { 'on': 'CtrlP' }
 noremap <D-R> :CtrlP<CR>
@@ -32,9 +29,6 @@ let g:ctrlp_prompt_mappings = {
     \ 'PrtDeleteWord()': ['<c-w>', '<m-bs>', '<c-bs>'],
     \ 'PrtClear()': ['<c-w>', '<d-bs>']
     \ }
-
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-noremap <D-1> :NERDTreeToggle<CR>
 
 " Syntax
 Plug 'keith/swift.vim', { 'for': 'swift' }
