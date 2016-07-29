@@ -1,0 +1,24 @@
+#!/usr/bin/env sh
+
+set -e
+
+# Get Dropbox setup, so that we have .plist files to link against.
+
+echo "Starting Dropbox"
+open /Applications/Dropbox.app
+
+if [ ! -f ~/Dropbox ]; then
+    echo "Login to Dropbox, then press ENTER to continue"
+    read waiting
+
+    if [ ! -e ~/Dropbox ] && [ -e ~/Dropbox\ \(Personal\) ]; then
+        echo "Moving ~/Dropbox (Personal) to ~/Dropbox."
+        mv ~/Dropbox\ \(Personal\) ~/Dropbox && ln -s ~/Dropbox ~/Dropbox\ \(Personal\)
+    fi
+
+    ls ~/Dropbox > /dev/null # Die if we don't have it.
+fi
+
+echo "Restoring mackuped files."
+mackup restore
+

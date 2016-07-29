@@ -1,0 +1,5 @@
+cask_args appdir: '/Applications'
+brew 'mackup'
+brew 'mas'
+tap 'caskroom/cask'
+cask 'dropbox'

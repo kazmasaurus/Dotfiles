@@ -12,3 +12,9 @@ task :homebrew => :dotbot do
     sh 'dotbot/bin/dotbot -d homebrew -c homebrew/install.conf.yaml'
 end
 
+task :meta => :homebrew do
+    sh 'dotbot/bin/dotbot -d meta -c meta/install.conf.yaml'
+    sh 'brew bundle --file=meta/Brewfile'
+    sh 'meta/setup'
+end
+
