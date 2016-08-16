@@ -3,3 +3,20 @@ brew 'mackup'
 brew 'mas'
 tap 'caskroom/cask'
 cask 'dropbox'
+
+# The above is necissary for this step
+# The below is just the catch all tools
+cask 'google-chrome'
+cask 'moom'
+cask 'alfred'
+cask 'bartender'
+cask 'kaleidoscope'
+cask 'omnifocus'
+
+mas '1Password', id: 443987910
+mas 'Day One', id: 1055511498
+mas 'Fantastical 2', id: 975937182
+
+# Ugh: https://github.com/argon/mas/issues/19#issuecomment-214076626
+mas 'Dash 3 - API Docs & Snippets', id: 449589707
+mas 'Xcode', id: 497799835
