@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 set -e
 
@@ -21,4 +21,6 @@ fi
 
 echo "Restoring mackuped files."
 mackup restore
+killall -u $(whoami) cfprefsd
+echo "You may need to restart for changed keyboard shortcuts to take effect."
 
