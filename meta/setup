@@ -7,7 +7,7 @@ set -e
 echo "Starting Dropbox"
 open /Applications/Dropbox.app
 
-if [ ! -f ~/Dropbox ]; then
+if [ ! -d ~/Dropbox ]; then
     echo "Login to Dropbox, then press ENTER to continue"
     read waiting
 
