@@ -9,7 +9,6 @@ cask 'dropbox'
 cask 'google-chrome'
 cask 'moom'
 cask 'alfred'
-cask 'bartender'
 cask 'kaleidoscope'
 cask 'omnifocus'
 
