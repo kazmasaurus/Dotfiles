@@ -1,0 +1,12 @@
+- link:
+    ~/.mackup.cfg: mackup.cfg
+
+- shell:
+    -
+        command: 'mackup restore'
+        description: 'Restoring mockuped files.'
+
+    -
+        command: killall -u $(whoami) cfprefsd
+        description: 'Attempt to kill plist caches.'
+

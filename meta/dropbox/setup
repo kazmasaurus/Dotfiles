@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+set -e
+
+if [ -d ~/Dropbox ]; then exit 0; fi
+
+echo "Login to Dropbox, then press ENTER to continue"
+read waiting
+if [ ! -e ~/Dropbox ] && [ -e ~/Dropbox\ \(Personal\) ]; then
+    echo "Moving ~/Dropbox (Personal) to ~/Dropbox."
+    mv ~/Dropbox\ \(Personal\) ~/Dropbox && ln -s ~/Dropbox ~/Dropbox\ \(Personal\)
+fi
+
+ls ~/Dropbox > /dev/null # Die if we don't have it.
+
