@@ -2,7 +2,7 @@
 
 require 'open3'
 
-task :default => [:fish, :git, :vim]
+task :default => [:fish, :git, :vim, :fonts]
 
 task :install => [:'meta:mackup', :default]
 
@@ -35,6 +35,10 @@ end
 task :vim => [:'meta:homebrew', :'meta:dotbot'] do
     sh 'brew bundle --file=vim/Brewfile'
     sh 'meta/dotbot/bin/dotbot -d vim -c vim/install.conf.yaml'
+end
+
+task :fonts => [:'meta:dotbot'] do
+    sh 'meta/dotbot/bin/dotbot -d fonts -c fonts/install.conf.yaml'
 end
 
 # This is more or less the setup process
