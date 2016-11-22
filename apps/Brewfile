@@ -1,4 +1,3 @@
-cask_args appdir: '/Applications'
 brew 'mas'
 
 # The above is necissary for this step

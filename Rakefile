@@ -2,7 +2,7 @@
 
 require 'open3'
 
-task :default => [:fish, :git, :vim, :fonts]
+task :default => [:fish, :git, :vim, :fonts, :'apps']
 
 task :install => [:'meta:mackup', :default]
 
@@ -17,10 +17,6 @@ task :install => [:'meta:mackup', :default]
 #   So the stuff in that Brewfile can actually go in other brewfiles that go later.
 
 # Config syncing
-
-task :meta => [:dropbox, :homebrew] do
-    sh 'brew bundle --file=stuff/Brewfile'
-end
 
 task :fish => [:'meta:homebrew', :'meta:dotbot'] do
     sh 'brew bundle --file=fish/Brewfile'
@@ -39,6 +35,10 @@ end
 
 task :fonts => [:'meta:dotbot'] do
     sh 'meta/dotbot/bin/dotbot -d fonts -c fonts/install.conf.yaml'
+end
+
+task :'apps' => [:'meta:homebrew'] do
+    sh 'brew bundle --file=apps/Brewfile'
 end
 
 # This is more or less the setup process
