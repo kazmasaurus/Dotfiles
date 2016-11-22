@@ -19,17 +19,17 @@ task :install => [:'meta:mackup', :default]
 # Config syncing
 
 task :fish => [:'meta:homebrew', :'meta:dotbot'] do
-    sh 'brew bundle --file=fish/Brewfile'
+    sh 'brew bundle --verbose --file=fish/Brewfile'
     sh 'meta/dotbot/bin/dotbot -d fish -c fish/install.conf.yaml'
 end
 
 task :git => [:'meta:homebrew', :'meta:dotbot'] do
-    sh 'brew bundle --file=git/Brewfile'
+    sh 'brew bundle --verbose --file=git/Brewfile'
     sh 'meta/dotbot/bin/dotbot -d git -c git/install.conf.yaml'
 end
 
 task :vim => [:'meta:homebrew', :'meta:dotbot'] do
-    sh 'brew bundle --file=vim/Brewfile'
+    sh 'brew bundle --verbose --file=vim/Brewfile'
     sh 'meta/dotbot/bin/dotbot -d vim -c vim/install.conf.yaml'
 end
 
@@ -38,19 +38,19 @@ task :fonts => [:'meta:dotbot'] do
 end
 
 task :'apps' => [:'meta:homebrew'] do
-    sh 'brew bundle --file=apps/Brewfile'
+    sh 'brew bundle --verbose --file=apps/Brewfile'
 end
 
 # This is more or less the setup process
 namespace :meta do
 
     task :mackup => [:dropbox, :homebrew, :dotbot] do
-        sh 'brew bundle --file=meta/mackup/Brewfile'
+        sh 'brew bundle --verbose --file=meta/mackup/Brewfile'
         sh 'meta/dotbot/bin/dotbot -d meta/mackup -c meta/mackup/install.conf.yaml'
     end
 
     task :dropbox => [:homebrew, :dotbot] do
-        sh 'brew bundle --file=meta/dropbox/Brewfile'
+        sh 'brew bundle --verbose --file=meta/dropbox/Brewfile'
         sh 'meta/dotbot/bin/dotbot -d meta/dropbox -c meta/dropbox/install.conf.yaml'
     end
 
