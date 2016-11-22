@@ -1,0 +1,5 @@
+
+- link:
+    ~/.config/git/ignore: config/.gitignore
+    ~/.config/git/config: config/.gitconfig
+

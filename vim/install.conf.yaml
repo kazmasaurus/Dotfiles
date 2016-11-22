@@ -1,0 +1,14 @@
+
+
+- shell:
+    -
+      command: 'git submodule update --init --recursive vim-plug'
+      description: 'Installing vim-plug'
+
+- link:
+    ~/.vimrc: vimrc
+    ~/.vim/ftplugin: ftplugin
+    ~/.vim/ftdetect: ftdetect
+    ~/.vim/autoload/plug.vim: vim-plug/plug.vim
+
+

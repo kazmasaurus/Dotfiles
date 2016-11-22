@@ -2,6 +2,7 @@
 
 require 'open3'
 
+task :default => [:fish, :git, :vim]
 
 task :install => [:'meta:mackup', :default]
 
@@ -17,10 +18,23 @@ task :install => [:'meta:mackup', :default]
 
 # Config syncing
 
-task :metaa => [:dropbox, :homebrew] do
-    sh 'meta/dotbot/bin/dotbot -d meta -c meta/install.conf.yaml'
-    sh 'brew bundle --file=meta/Brewfile'
-    sh 'meta/setup'
+task :meta => [:dropbox, :homebrew] do
+    sh 'brew bundle --file=stuff/Brewfile'
+end
+
+task :fish => [:'meta:homebrew', :'meta:dotbot'] do
+    sh 'brew bundle --file=fish/Brewfile'
+    sh 'meta/dotbot/bin/dotbot -d fish -c fish/install.conf.yaml'
+end
+
+task :git => [:'meta:homebrew', :'meta:dotbot'] do
+    sh 'brew bundle --file=git/Brewfile'
+    sh 'meta/dotbot/bin/dotbot -d git -c git/install.conf.yaml'
+end
+
+task :vim => [:'meta:homebrew', :'meta:dotbot'] do
+    sh 'brew bundle --file=vim/Brewfile'
+    sh 'meta/dotbot/bin/dotbot -d vim -c vim/install.conf.yaml'
 end
 
 # This is more or less the setup process
