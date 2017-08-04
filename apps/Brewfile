@@ -16,7 +16,6 @@ mas 'Fantastical 2', id: 975937182
 mas 'Airmail 3', id: 918858936
 
 # Ugh: https://github.com/argon/mas/issues/19#issuecomment-214076626
-mas 'Dash 3 - API Docs & Snippets', id: 449589707
 mas 'Xcode', id: 497799835
 
 
