@@ -8,9 +8,12 @@ cask 'alfred'
 cask 'kaleidoscope'
 cask 'omnifocus'
 
+# $ mas search [app name]
+
 mas '1Password', id: 443987910
 mas 'Day One', id: 1055511498
 mas 'Fantastical 2', id: 975937182
+mas 'Airmail 3', id: 918858936
 
 # Ugh: https://github.com/argon/mas/issues/19#issuecomment-214076626
 mas 'Dash 3 - API Docs & Snippets', id: 449589707
