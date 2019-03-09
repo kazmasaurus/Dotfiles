@@ -1,2 +1,2 @@
 brew "vim"
-brew "macvim"
+brew "macvim", link: true
