@@ -18,23 +18,27 @@ task :install => [:'meta:mackup', :default]
 
 # Config syncing
 
+# Dotbot now uses $SHELL for all it's execution, so we force `bash` so that we
+#   have something that'll run on both existing and fresh machines.
+dotbot = 'env SHELL=/bin/bash meta/dotbot/bin/dotbot'
+
 task :fish => [:'meta:homebrew', :'meta:dotbot'] do
     sh 'brew bundle --verbose --file=fish/Brewfile'
-    sh 'meta/dotbot/bin/dotbot -d fish -c fish/install.conf.yaml'
+    sh "#{dotbot} -c fish/install.conf.yaml"
 end
 
 task :git => [:'meta:homebrew', :'meta:dotbot'] do
     sh 'brew bundle --verbose --file=git/Brewfile'
-    sh 'meta/dotbot/bin/dotbot -d git -c git/install.conf.yaml'
+    sh "#{dotbot} -c git/install.conf.yaml"
 end
 
 task :vim => [:'meta:homebrew', :'meta:dotbot'] do
     sh 'brew bundle --verbose --file=vim/Brewfile'
-    sh 'meta/dotbot/bin/dotbot -d vim -c vim/install.conf.yaml'
+    sh "#{dotbot} -c vim/install.conf.yaml"
 end
 
 task :fonts => [:'meta:dotbot'] do
-    sh 'meta/dotbot/bin/dotbot -d fonts -c fonts/install.conf.yaml'
+    sh "#{dotbot} -c fonts/install.conf.yaml"
 end
 
 task :'apps' => [:'meta:homebrew'] do
@@ -46,12 +50,12 @@ namespace :meta do
 
     task :mackup => [:homebrew, :dotbot] do
         sh 'brew bundle --verbose --file=meta/mackup/Brewfile'
-        sh 'meta/dotbot/bin/dotbot -d meta/mackup -c meta/mackup/install.conf.yaml'
+        sh "#{dotbot} -c meta/mackup/install.conf.yaml"
     end
 
     task :homebrew => :dotbot do
         # No brewfile, because we don't have homebrew installed yet ^_^
-        sh 'meta/dotbot/bin/dotbot -d meta/homebrew -c meta/homebrew/install.conf.yaml'
+        sh "#{dotbot} -c meta/homebrew/install.conf.yaml"
     end
 
     # Underlying tool for scripting and linking

@@ -8,6 +8,7 @@
         command: "cat /etc/shells | grep $(which fish) || echo $(which fish) | sudo tee -a /etc/shells"
         description: Ensure fish can shell
     -
-        command: "echo $SHELL | grep $(which fish) || chsh -s $(which fish)"
+        # We do this wonky `dscl` command because dotbot is executed with `$SHELL=/bin/bash`
+        command: "dscl . -read /Users/$USER/ UserShell | grep $(which fish) || chsh -s $(which fish)"
         description: Set fish as shell
 
