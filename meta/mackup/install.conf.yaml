@@ -5,6 +5,9 @@
     -
         command: 'mackup restore'
         description: 'Restoring mockuped files.'
+        stdin: true
+        stdout: true
+        stderr: true
 
     -
         command: killall -u $(whoami) cfprefsd
