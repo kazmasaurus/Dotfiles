@@ -13,4 +13,9 @@
         path: vim-plug/plug.vim
         create: true
 
+- shell:
+    -
+      command: 'vim +PlugInstall +q +q'
+      description: 'Install plugins'
+      stdin: true
 
