@@ -6,18 +6,19 @@ cask 'google-chrome'
 cask 'moom'
 cask 'alfred'
 cask 'kaleidoscope'
-cask 'omnifocus'
+cask 'textmate'
 
 # $ mas search [app name]
 
-mas '1Password', id: 443987910
 mas 'Day One', id: 1055511498
 mas 'Fantastical 2', id: 975937182
 mas 'Airmail 3', id: 918858936
+mas 'Slack', id: 803453959
+mas 'Things 3', id: 904280696
+mas 'Bear', id: 1091189122
 
 # Ugh: https://github.com/argon/mas/issues/19#issuecomment-214076626
 mas 'Xcode', id: 497799835
-
 
 # Basic dev toolkit
 brew "cloc"
