@@ -28,3 +28,9 @@
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
 	required = true
+
+# Park work specific config in it's own spot.
+[includeIf "gitdir:~/Code/Work/"]
+	path = ~/Code/Work/.gitconfig
+
+

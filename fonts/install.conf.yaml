@@ -1,0 +1,16 @@
+
+- link:
+    # SF Mono - Thank you Terminal.app
+    /Library/Fonts/SFMono-Bold.otf: /Applications/Utilities/Terminal.app/Contents/Resources/Fonts/SFMono-Bold.otf
+    /Library/Fonts/SFMono-BoldItalic.otf: /Applications/Utilities/Terminal.app/Contents/Resources/Fonts/SFMono-BoldItalic.otf
+    /Library/Fonts/SFMono-Heavy.otf: /Applications/Utilities/Terminal.app/Contents/Resources/Fonts/SFMono-Heavy.otf
+    /Library/Fonts/SFMono-HeavyItalic.otf: /Applications/Utilities/Terminal.app/Contents/Resources/Fonts/SFMono-HeavyItalic.otf
+    /Library/Fonts/SFMono-Light.otf: /Applications/Utilities/Terminal.app/Contents/Resources/Fonts/SFMono-Light.otf
+    /Library/Fonts/SFMono-LightItalic.otf: /Applications/Utilities/Terminal.app/Contents/Resources/Fonts/SFMono-LightItalic.otf
+    /Library/Fonts/SFMono-Medium.otf: /Applications/Utilities/Terminal.app/Contents/Resources/Fonts/SFMono-Medium.otf
+    /Library/Fonts/SFMono-MediumItalic.otf: /Applications/Utilities/Terminal.app/Contents/Resources/Fonts/SFMono-MediumItalic.otf
+    /Library/Fonts/SFMono-Regular.otf: /Applications/Utilities/Terminal.app/Contents/Resources/Fonts/SFMono-Regular.otf
+    /Library/Fonts/SFMono-RegularItalic.otf: /Applications/Utilities/Terminal.app/Contents/Resources/Fonts/SFMono-RegularItalic.otf
+    /Library/Fonts/SFMono-Semibold.otf: /Applications/Utilities/Terminal.app/Contents/Resources/Fonts/SFMono-Semibold.otf
+    /Library/Fonts/SFMono-SemiboldItalic.otf: /Applications/Utilities/Terminal.app/Contents/Resources/Fonts/SFMono-SemiboldItalic.otf
+

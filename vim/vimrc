@@ -88,7 +88,7 @@ else
 endif
 
 if has('gui_running')
-    set guifont=Source\ Code\ Pro:h12
+    set guifont=SF\ Mono:h11
 endif
 
 if has('gui_running')

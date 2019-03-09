@@ -1,0 +1,35 @@
+brew 'mas'
+
+# The above is necissary for this step
+# The below is just the catch all tools
+cask 'google-chrome'
+cask 'moom'
+cask 'alfred'
+cask 'kaleidoscope'
+cask 'textmate'
+
+# $ mas search [app name]
+
+mas 'Day One', id: 1055511498
+mas 'Fantastical 2', id: 975937182
+mas 'Airmail 3', id: 918858936
+mas 'Slack', id: 803453959
+mas 'Things 3', id: 904280696
+mas 'Bear', id: 1091189122
+
+# Ugh: https://github.com/argon/mas/issues/19#issuecomment-214076626
+mas 'Xcode', id: 497799835
+
+# Basic dev toolkit
+brew "cloc"
+
+tap "tldr-pages/tldr"
+brew "tldr"
+
+# Apps 
+# Note: You'll need to `brew linkapps` when you're done
+#       This should be done by the install script though.
+
+# iOS dev tools
+brew "carthage"
+
