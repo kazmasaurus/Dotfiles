@@ -1,7 +1,4 @@
 
-
-require 'open3'
-
 task :default => [:fish, :git, :vim, :fonts, :'apps']
 
 task :install => [:'meta:mackup', :default]
