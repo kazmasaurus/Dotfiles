@@ -1,5 +1,9 @@
 
 - link:
-    ~/.config/git/ignore: config/.gitignore
-    ~/.config/git/config: config/.gitconfig
+    ~/.config/git/ignore:
+        path: config/.gitignore
+        create: true
+    ~/.config/git/config:
+        path: config/.gitconfig
+        create: true
 

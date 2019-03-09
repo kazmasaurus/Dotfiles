@@ -9,6 +9,8 @@
     ~/.vimrc: vimrc
     ~/.vim/ftplugin: ftplugin
     ~/.vim/ftdetect: ftdetect
-    ~/.vim/autoload/plug.vim: vim-plug/plug.vim
+    ~/.vim/autoload/plug.vim:
+        path: vim-plug/plug.vim
+        create: true
 
 
