@@ -12,6 +12,10 @@
     ~/.vim/autoload/plug.vim:
         path: vim-plug/plug.vim
         create: true
+    ~/.config/fish/functions:
+        path: fish_functions/*
+        create: true
+        glob: true
 
 - shell:
     -
