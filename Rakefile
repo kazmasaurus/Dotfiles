@@ -1,5 +1,5 @@
 
-task :default => [:fish, :git, :vim, :fonts, :'apps']
+task :default => [:fish, :git, :vim, :xcode, :fonts, :'apps']
 
 task :install => [:'meta:mackup', :default]
 
@@ -24,14 +24,18 @@ task :fish => [:'meta:homebrew', :'meta:dotbot'] do
     sh "#{dotbot} -c fish/install.conf.yaml"
 end
 
-task :git => [:'meta:homebrew', :'meta:dotbot'] do
+task :git => [:'meta:homebrew', :'meta:dotbot', :'fish'] do
     sh 'brew bundle --verbose --file=git/Brewfile'
     sh "#{dotbot} -c git/install.conf.yaml"
 end
 
-task :vim => [:'meta:homebrew', :'meta:dotbot'] do
+task :vim => [:'meta:homebrew', :'meta:dotbot', :'fish'] do
     sh 'brew bundle --verbose --file=vim/Brewfile'
     sh "#{dotbot} -c vim/install.conf.yaml"
+end
+
+task :xcode => [:'meta:dotbot', :'fish'] do
+    sh "#{dotbot} -c Xcode/install.conf.yaml"
 end
 
 task :fonts => [:'meta:dotbot'] do

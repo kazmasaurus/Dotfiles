@@ -12,3 +12,11 @@
         command: "dscl . -read /Users/$USER/ UserShell | grep $(which fish) || chsh -s $(which fish)"
         description: Set fish as shell
 
+
+# Ideally we would set this up so that this clean, and all the links happened in the same place.
+# That would probably mean having all modules expose a `fish_functions`, but do the linking in the Rakefile
+#
+# In the mean time, we can just make any task that links functions depend on `:fish`
+- clean:
+    ~/.config/fish/functions:
+        force: true

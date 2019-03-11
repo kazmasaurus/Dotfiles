@@ -1,0 +1,6 @@
+- link:
+    ~/.config/fish/functions:
+        path: fish_functions/*
+        create: true
+        glob: true
+
