@@ -7,6 +7,7 @@ cask 'moom'
 cask 'alfred'
 cask 'kaleidoscope'
 cask 'textmate'
+cask 'dash'
 
 # $ mas search [app name]
 
