@@ -34,3 +34,5 @@
 	path = ~/Code/Work/.gitconfig
 
 
+[credential]
+	helper = osxkeychain
