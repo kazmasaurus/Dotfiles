@@ -1,13 +1,13 @@
 
 - link:
     ~/.config/git/ignore:
-        path: config/.gitignore
+        path: config/ignore
         create: true
     ~/.config/git/config:
-        path: config/.gitconfig
+        path: config/config
         create: true
     ~/.config/git/attributes:
-        path: config/.gitattributes
+        path: config/attributes
         create: true
     ~/.config/fish/functions:
         path: fish_functions/*
