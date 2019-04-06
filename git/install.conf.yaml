@@ -6,6 +6,9 @@
     ~/.config/git/config:
         path: config/.gitconfig
         create: true
+    ~/.config/git/attributes:
+        path: config/.gitattributes
+        create: true
     ~/.config/fish/functions:
         path: fish_functions/*
         create: true
