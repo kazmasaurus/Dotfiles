@@ -140,6 +140,17 @@ if &shell =~# 'fish$'
 endif
 " }}}
 
+
+" Temp File Management {{{
+
+" For the time being, we just don't want to deal with swap files.
+" We can get away with this because we'll autosave, so we don't have to worry
+" about multiple uncommitted edits.
+" Autosave from: https://stackoverflow.com/a/4639076
+
+set noswapfile
+autocmd BufLeave,FocusLost * silent! wall
+
 " Put all temporary files under the same directory.
 " https://github.com/mhinz/vim-galore#handling-backup-swap-undo-and-viminfo-files
 "set backup
@@ -151,4 +162,4 @@ endif
 "set undofile
 "set undodir     =$HOME/.vim/files/undo/
 "set viminfo     ='100,n$HOME/.vim/files/info/viminfo
-
+" }}}
