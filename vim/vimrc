@@ -68,6 +68,12 @@ set shiftwidth  =4         " >> indents by 4 spaces.
 set shiftround             " >> indents to next multiple of 'shiftwidth'.
 " }}}
 
+" Line Wrapping {{{
+set wrap                " Wrap displayed text, without changing formatting.
+set linebreak           " Wrap on boundary characters
+set textwidth=0         " Disable auto-inserting newlines
+" }}}
+
 " Code Folding {{{
 set foldmethod=indent
 set foldlevelstart=99
