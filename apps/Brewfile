@@ -13,7 +13,6 @@ cask 'dash'
 
 mas 'Day One', id: 1055511498
 mas 'Fantastical 2', id: 975937182
-mas 'Airmail 3', id: 918858936
 mas 'Slack', id: 803453959
 mas 'Things 3', id: 904280696
 mas 'Bear', id: 1091189122
