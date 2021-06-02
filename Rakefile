@@ -49,9 +49,14 @@ end
 # This is more or less the setup process
 namespace :meta do
 
-    task :mackup => [:homebrew, :dotbot] do
+    task :mackup => [:dropbox, :homebrew, :dotbot] do
         sh 'brew bundle --verbose --file=meta/mackup/Brewfile'
         sh "#{dotbot} -c meta/mackup/install.conf.yaml"
+    end
+
+    task :dropbox => [:homebrew, :dotbot] do
+        sh 'brew bundle --verbose --file=meta/dropbox/Brewfile'
+        sh '#{dotbot} -c meta/dropbox/install.conf.yaml'
     end
 
     task :homebrew => :dotbot do

@@ -1,0 +1,24 @@
+{
+  "entries": {
+    "cask": {
+      "dropbox": {
+        "version": "123.4.4832",
+        "options": {
+          "full_name": "dropbox"
+        }
+      }
+    }
+  },
+  "system": {
+    "macos": {
+      "big_sur": {
+        "HOMEBREW_VERSION": "3.1.9",
+        "HOMEBREW_PREFIX": "/usr/local",
+        "Homebrew/homebrew-core": "d389f92479f0af61197e06b9b64b7ffec74ab351",
+        "CLT": "12.5.0.0.1.1617976050",
+        "Xcode": "12.5",
+        "macOS": "11.2.3"
+      }
+    }
+  }
+}
