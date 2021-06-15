@@ -4,7 +4,7 @@
 
     # Get Homebrew setup
     -
-        command: 'brew --version || ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
+        command: 'brew --version || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"'
         description: Installing Homebrew
     -
         command: "brew tap homebrew/bundle"
