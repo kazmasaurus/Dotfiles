@@ -2,22 +2,30 @@
   "entries": {
     "brew": {
       "macvim": {
-        "version": "8.2-162",
+        "version": "8.2-171_1",
         "bottle": {
-          "cellar": ":any",
-          "prefix": "/usr/local",
+          "rebuild": 0,
+          "root_url": "https://ghcr.io/v2/homebrew/core",
           "files": {
+            "arm64_big_sur": {
+              "cellar": "/opt/homebrew/Cellar",
+              "url": "https://ghcr.io/v2/homebrew/core/macvim/blobs/sha256:87e1904216e8f0131e055f5a44b2c863b812ed855c53f377ec1d0afe81c30230",
+              "sha256": "87e1904216e8f0131e055f5a44b2c863b812ed855c53f377ec1d0afe81c30230"
+            },
+            "big_sur": {
+              "cellar": "/usr/local/Cellar",
+              "url": "https://ghcr.io/v2/homebrew/core/macvim/blobs/sha256:607b58cfc70e02d68aa491f8c968f11341386c6f0972d2a113d41c69658c51a7",
+              "sha256": "607b58cfc70e02d68aa491f8c968f11341386c6f0972d2a113d41c69658c51a7"
+            },
             "catalina": {
-              "url": "https://homebrew.bintray.com/bottles/macvim-8.2-162.catalina.bottle.tar.gz",
-              "sha256": "7bb6dd7e6d3e28d167e497e4993d7bc1c44c654069bef1c0c51e2d4bd9b17565"
+              "cellar": "/usr/local/Cellar",
+              "url": "https://ghcr.io/v2/homebrew/core/macvim/blobs/sha256:eba980cb563fb4766e330e45d0bb7fa3f1f1be020b3490d0421e0816c266ea19",
+              "sha256": "eba980cb563fb4766e330e45d0bb7fa3f1f1be020b3490d0421e0816c266ea19"
             },
             "mojave": {
-              "url": "https://homebrew.bintray.com/bottles/macvim-8.2-162.mojave.bottle.tar.gz",
-              "sha256": "d62e3967c82b0b681be1209ca3bf4e38b9aeb2e72b80b0e6a3b29ddc66658061"
-            },
-            "high_sierra": {
-              "url": "https://homebrew.bintray.com/bottles/macvim-8.2-162.high_sierra.bottle.tar.gz",
-              "sha256": "f4876c40c8276b6a9cd3ca58d6b9ddc87ed72a7a04d83a985908fe3dc1e3f005"
+              "cellar": "/usr/local/Cellar",
+              "url": "https://ghcr.io/v2/homebrew/core/macvim/blobs/sha256:a13d4c099c2f0769bfb31fdbafcf9c3a6dd53e583b82d0f2076f39310118ac8b",
+              "sha256": "a13d4c099c2f0769bfb31fdbafcf9c3a6dd53e583b82d0f2076f39310118ac8b"
             }
           }
         },
@@ -36,6 +44,14 @@
         "CLT": "",
         "Xcode": "11.4",
         "macOS": "10.15.4"
+      },
+      "big_sur": {
+        "HOMEBREW_VERSION": "3.1.9",
+        "HOMEBREW_PREFIX": "/usr/local",
+        "Homebrew/homebrew-core": "355770ba4ea4b60696560668f4a1846826c1df15",
+        "CLT": "12.5.0.22.9",
+        "Xcode": "12.5",
+        "macOS": "11.4"
       }
     }
   }
