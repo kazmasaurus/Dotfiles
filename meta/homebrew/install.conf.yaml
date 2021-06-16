@@ -17,3 +17,5 @@
         stdout: true
         stderr: true
 
+# In multi user setups, you may need to deal with something like this:
+# https://stackoverflow.com/a/56686602
