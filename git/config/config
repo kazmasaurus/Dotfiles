@@ -27,8 +27,8 @@
 	required = true
 
 # Park work specific config in it's own spot.
-[includeIf "gitdir:~/Code/Work/"]
-	path = ~/Code/Work/.gitconfig
+# [includeIf "gitdir:~/Code/Work/"]
+# 	path = ~/Code/Work/.gitconfig
 
 
 [credential]
