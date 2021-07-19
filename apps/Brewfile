@@ -9,6 +9,7 @@ cask 'kaleidoscope'
 cask 'dash'
 cask 'zoom'
 cask 'asana'
+cask 'notion'
 
 # $ mas search [app name]
 
