@@ -10,6 +10,7 @@ cask 'dash'
 cask 'zoom'
 cask 'asana'
 cask 'notion'
+cask 'paw'
 
 # $ mas search [app name]
 
