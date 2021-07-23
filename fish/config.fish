@@ -8,3 +8,5 @@ set PATH "/opt/homebrew/bin" $PATH
 # Wrap hub in `git`
 eval (hub alias -s)
 
+# Load `direnv`
+direnv hook fish | source
