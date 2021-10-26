@@ -4,7 +4,7 @@
 
     # Get Homebrew setup
     -
-        command: 'brew --version || ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
+        command: 'brew --version || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"'
         description: Installing Homebrew
     -
         command: "brew tap homebrew/bundle"
@@ -17,3 +17,5 @@
         stdout: true
         stderr: true
 
+# In multi user setups, you may need to deal with something like this:
+# https://stackoverflow.com/a/56686602

@@ -1,2 +1,5 @@
 # For all your shelly swimmings
 brew "fish"
+
+# Allows `.envrc` files that add exports when moving into a directory.
+brew 'direnv'

@@ -56,7 +56,7 @@ namespace :meta do
 
     task :dropbox => [:homebrew, :dotbot] do
         sh 'brew bundle --verbose --file=meta/dropbox/Brewfile'
-        sh '#{dotbot} -c meta/dropbox/install.conf.yaml'
+        sh "#{dotbot} -c meta/dropbox/install.conf.yaml"
     end
 
     task :homebrew => :dotbot do

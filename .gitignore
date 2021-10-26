@@ -25,3 +25,5 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+# Not really sure why they thought these would be useful :shrug:
+Brewfile.lock.json
