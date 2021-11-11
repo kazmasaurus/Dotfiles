@@ -58,3 +58,7 @@ tags
 # Clojure Stuff #
 #################
 .lein-*
+
+# Nova #
+########
+.nova
