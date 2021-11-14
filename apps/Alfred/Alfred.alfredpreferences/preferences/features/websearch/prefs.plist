@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>customSites</key>
+	<dict>
+		<key>02858241-9E19-44B0-8031-165B12AD6C54</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>emoji</string>
+			<key>text</key>
+			<string>Emojipedia</string>
+			<key>url</key>
+			<string>https://emojipedia.org/search/?q={query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>4A7EA97A-A5F0-43B0-83EA-2CC001DF7408</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>wmlink</string>
+			<key>text</key>
+			<string>Open WMLink `/{query}`</string>
+			<key>url</key>
+			<string>http://wmlink/{query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>D5C3EAA1-7235-463F-B26A-4B33A10ED6D8</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>quodb</string>
+			<key>spaces</key>
+			<string>%20</string>
+			<key>text</key>
+			<string>Search QuoDB for '{query}'</string>
+			<key>url</key>
+			<string>http://www.quodb.com/search/{query}?p=1&amp;titles_per_page=100&amp;phrases_per_title=5</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

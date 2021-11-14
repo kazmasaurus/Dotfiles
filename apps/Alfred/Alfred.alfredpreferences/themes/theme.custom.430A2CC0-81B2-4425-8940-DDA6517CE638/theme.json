@@ -1,0 +1,63 @@
+{
+  "alfredtheme" : {
+    "result" : {
+      "textSpacing" : 5,
+      "subtext" : {
+        "size" : 11,
+        "colorSelected" : "#FFFFFFC4",
+        "font" : "System Light",
+        "color" : "#00000065"
+      },
+      "shortcut" : {
+        "size" : 16,
+        "colorSelected" : "#FFFFFFFF",
+        "font" : "System Light",
+        "color" : "#480069FF"
+      },
+      "backgroundSelected" : "#D96DADFF",
+      "text" : {
+        "size" : 14,
+        "colorSelected" : "#FFFFFFFF",
+        "font" : "System Light",
+        "color" : "#000000E5"
+      },
+      "iconPaddingHorizontal" : 10,
+      "roundness" : 0,
+      "paddingVertical" : 6,
+      "iconSize" : 30
+    },
+    "separator" : {
+      "color" : "#CBCBCBF3",
+      "thickness" : 0
+    },
+    "search" : {
+      "backgroundSelected" : "#FFBFD1FF",
+      "paddingHorizontal" : 8,
+      "spacing" : 4,
+      "text" : {
+        "size" : 24,
+        "colorSelected" : "#000000FF",
+        "font" : "System Light",
+        "color" : "#000000FF"
+      },
+      "background" : "#FFFFFF00",
+      "roundness" : 0,
+      "paddingVertical" : 4
+    },
+    "scrollbar" : {
+      "color" : "#A9A9A9FF",
+      "thickness" : 2
+    },
+    "name" : "Kazmasaurus",
+    "window" : {
+      "color" : "#FFFFFFBF",
+      "paddingHorizontal" : 0,
+      "width" : 559,
+      "borderPadding" : 0,
+      "borderColor" : "#0000007F",
+      "blur" : 10,
+      "roundness" : 8,
+      "paddingVertical" : 4
+    }
+  }
+}

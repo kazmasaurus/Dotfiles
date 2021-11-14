@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string></string>
+	<key>connections</key>
+	<dict>
+		<key>455C415B-C706-4A44-BB63-169B29BE52F8</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>FF316160-82F1-4AC1-8D82-72A1F0AC9ED6</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>FF316160-82F1-4AC1-8D82-72A1F0AC9ED6</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>A70A4E1E-712E-4575-967A-0AA64960904D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Ken Collins</string>
+	<key>description</key>
+	<string>Toggle the current track of iTunes loved state.</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>iTunes Loved</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>echo '
+(function() {
+  var track = Application("iTunes").currentTrack();
+  track.loved = true;
+  var notification = (track.loved ? "Loved" : "Unable to love") + ": " + track.name();
+  return notification;
+})()' | osascript -l JavaScript
+</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>FF316160-82F1-4AC1-8D82-72A1F0AC9ED6</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>A70A4E1E-712E-4575-967A-0AA64960904D</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>love</string>
+				<key>subtext</key>
+				<string>Love the current song</string>
+				<key>text</key>
+				<string>Love it</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>455C415B-C706-4A44-BB63-169B29BE52F8</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>455C415B-C706-4A44-BB63-169B29BE52F8</key>
+		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
+			<key>ypos</key>
+			<real>60</real>
+		</dict>
+		<key>A70A4E1E-712E-4575-967A-0AA64960904D</key>
+		<dict>
+			<key>xpos</key>
+			<integer>700</integer>
+			<key>ypos</key>
+			<real>60</real>
+		</dict>
+		<key>FF316160-82F1-4AC1-8D82-72A1F0AC9ED6</key>
+		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
+			<key>ypos</key>
+			<real>60</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string></string>
+</dict>
+</plist>

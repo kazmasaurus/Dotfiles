@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string></string>
+	<key>connections</key>
+	<dict>
+		<key>2C99F6F1-EF16-4CF1-9762-5D05A1FFAA4D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>16039760-F173-4AB8-9C73-DA7401D5DE23</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string></string>
+	<key>description</key>
+	<string></string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Collect links</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>collect</string>
+				<key>subtext</key>
+				<string>Collect the current open tabs into a set of links on the clipboard</string>
+				<key>text</key>
+				<string>Collect current tabs</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>2C99F6F1-EF16-4CF1-9762-5D05A1FFAA4D</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>(*
+Copies Safari's tabs to the clipboard as a markdown list of URL:s
+Built on https://github.com/martijnengler/tools/blob/master/list-safari-tabs/safari-tabs-to-clipboard.applescript,
+which was created by Martijn Engler (http://applecoach.nl)
+From: https://github.com/bjoreman/safari-tabs-to-markdown/blob/master/Safari%20tabs%20to%20markdown.applescript
+In term from: http://www.bjoreman.com/thoughts/tabsToMarkdown.html
+*)
+tell application "Safari"
+	set theWindow to front window
+	set theTabs to theWindow's tabs
+	set linkList to ""
+	repeat with eachTab in theTabs
+		set theURL to "" &amp; URL of eachTab
+		set theURL to my replace_chars(theURL, "(", "%28")
+		set theURL to my replace_chars(theURL, ")", "%29")
+		set theName to my replace_chars(name of eachTab, " - Wikipedia, the free encyclopedia", "")
+		set theName to my replace_chars(theName, " Ð Wikipedia", "")
+		set linkList to linkList &amp; "* [" &amp; theName &amp; "](" &amp; theURL &amp; ")
+"
+	end repeat
+	set the clipboard to the text of linkList
+end tell
+
+on replace_chars(this_text, search_string, replacement_string)
+	set AppleScript's text item delimiters to the search_string
+	set the item_list to every text item of this_text
+	set AppleScript's text item delimiters to the replacement_string
+	set this_text to the item_list as string
+	set AppleScript's text item delimiters to ""
+	return this_text
+end replace_chars</string>
+				<key>type</key>
+				<integer>6</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>16039760-F173-4AB8-9C73-DA7401D5DE23</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>16039760-F173-4AB8-9C73-DA7401D5DE23</key>
+		<dict>
+			<key>ypos</key>
+			<real>60</real>
+		</dict>
+		<key>2C99F6F1-EF16-4CF1-9762-5D05A1FFAA4D</key>
+		<dict>
+			<key>ypos</key>
+			<real>60</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string></string>
+</dict>
+</plist>

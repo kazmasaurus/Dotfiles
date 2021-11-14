@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.kazmasaurus.darkmode</string>
+	<key>category</key>
+	<string>Productivity</string>
+	<key>connections</key>
+	<dict>
+		<key>8ED58B47-7144-4E7B-A4B6-333CE08028EE</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>AAE2193C-E6C1-4A1C-8A17-774AF8868DCF</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>AAE2193C-E6C1-4A1C-8A17-774AF8868DCF</key>
+		<array/>
+		<key>BAE05921-2534-4AF6-8BC8-AFA607F2B62A</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>ED6F3375-2FB7-4A1C-815D-971D8924591E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>CD69778A-A49B-44D1-9F54-B24359DEF8B8</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>8ED58B47-7144-4E7B-A4B6-333CE08028EE</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>ED6F3375-2FB7-4A1C-815D-971D8924591E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>AAE2193C-E6C1-4A1C-8A17-774AF8868DCF</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Zak Remer</string>
+	<key>description</key>
+	<string>Configures os and apps to use dark mode</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Dark Mode</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>light</string>
+				<key>subtext</key>
+				<string>Change to light mode</string>
+				<key>text</key>
+				<string>Light Mode</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>CD69778A-A49B-44D1-9F54-B24359DEF8B8</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>false</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>8ED58B47-7144-4E7B-A4B6-333CE08028EE</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>applescript</key>
+				<string>on alfred_script(q)	# Set Dark Mode	set isDark to q = "true"		tell application "System Events"		tell appearance preferences			# Can be one of: true, false, not dark			set dark mode to my systemValue(isDark)		end tell	end tell		tell application "Terminal"		set theme to settings set (my terminalThemeName(isDark))				# Update default settings (for new windows/tabs)		set default settings to theme		# Update settings for exsting windows/tabs		set current settings of tabs of windows to theme	end tellend alfred_script# Helpers# returns the appropriate `true`/`false` for the provided `darkValue`on systemValue(darkValue)	return darkValueend systemValue# returns the theme appropriate for the provided `darkValue`on terminalThemeName(darkValue)	if darkValue then		return "Kazmasaurus Dark"	else		return "Kazmasaurus"	end ifend terminalThemeName</string>
+				<key>cachescript</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.applescript</string>
+			<key>uid</key>
+			<string>AAE2193C-E6C1-4A1C-8A17-774AF8868DCF</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>dark</string>
+				<key>subtext</key>
+				<string>Change to dark mode</string>
+				<key>text</key>
+				<string>Dark Mode</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>BAE05921-2534-4AF6-8BC8-AFA607F2B62A</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>true</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>ED6F3375-2FB7-4A1C-815D-971D8924591E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>8ED58B47-7144-4E7B-A4B6-333CE08028EE</key>
+		<dict>
+			<key>xpos</key>
+			<integer>220</integer>
+			<key>ypos</key>
+			<integer>80</integer>
+		</dict>
+		<key>AAE2193C-E6C1-4A1C-8A17-774AF8868DCF</key>
+		<dict>
+			<key>xpos</key>
+			<integer>320</integer>
+			<key>ypos</key>
+			<integer>130</integer>
+		</dict>
+		<key>BAE05921-2534-4AF6-8BC8-AFA607F2B62A</key>
+		<dict>
+			<key>xpos</key>
+			<integer>50</integer>
+			<key>ypos</key>
+			<integer>210</integer>
+		</dict>
+		<key>CD69778A-A49B-44D1-9F54-B24359DEF8B8</key>
+		<dict>
+			<key>xpos</key>
+			<integer>50</integer>
+			<key>ypos</key>
+			<integer>50</integer>
+		</dict>
+		<key>ED6F3375-2FB7-4A1C-815D-971D8924591E</key>
+		<dict>
+			<key>xpos</key>
+			<integer>220</integer>
+			<key>ypos</key>
+			<integer>240</integer>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string></string>
+</dict>
+</plist>

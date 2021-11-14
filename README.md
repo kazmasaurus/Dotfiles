@@ -18,3 +18,10 @@ git submodule update --init --recursive
 
 - You'll probably be generating new ssh keys for this machine. Don't forget to also setup a [`config`](http://stackoverflow.com/questions/3466626/add-private-key-permanently-with-ssh-add-on-ubuntu)
 - `plist` files are [cached](http://hints.macworld.com/article.php?story=20130908042828630), but linking should work either at startup or after killing the cashing process (`killall -u zak cfprefsd`)
+
+## Manual stuff
+
+### Alfred
+
+- [ ] Point Alfred to use `apps/Alfred/Alfred.alfredpreferences`
+- [ ] Set Alfred to use ⌘-Space (this setting doesn't want to sync through the preferences file for reasons 🤷‍♀️)

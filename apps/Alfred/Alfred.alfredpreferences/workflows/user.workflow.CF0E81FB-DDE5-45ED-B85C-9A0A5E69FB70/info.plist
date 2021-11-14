@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string></string>
+	<key>connections</key>
+	<dict>
+		<key>14FB4B2F-39C7-47E8-8F1D-84780B22C2C4</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>C52A863C-9705-492B-8F8D-5F6A97F954D5</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>C52A863C-9705-492B-8F8D-5F6A97F954D5</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>0A9E4032-D3D5-43DC-B055-B6A0D2FA7E77</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string></string>
+	<key>description</key>
+	<string>Unbreak XCode shit</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>fuxcode</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>Sucessfully cleaned `DerivedData`</string>
+				<key>title</key>
+				<string>Fuxcoded.</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>0A9E4032-D3D5-43DC-B055-B6A0D2FA7E77</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>fuxcode</string>
+				<key>subtext</key>
+				<string>Fix XCodes broken shit</string>
+				<key>text</key>
+				<string>Fuxcode</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>14FB4B2F-39C7-47E8-8F1D-84780B22C2C4</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>127</integer>
+				<key>script</key>
+				<string>rm -rf ~/Library/Developer/Xcode/DerivedData/*
+rm -rf ~/Library/Caches/com.apple.dt.Xcode/*
+
+# This service seems to keep an in memory cache of simulator locations, which will
+# 	fall over if Xcode is renamed (such as for an update dance.)
+sudo killall -9 com.apple.CoreSimulator.CoreSimulatorService</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>C52A863C-9705-492B-8F8D-5F6A97F954D5</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>0A9E4032-D3D5-43DC-B055-B6A0D2FA7E77</key>
+		<dict>
+			<key>xpos</key>
+			<integer>700</integer>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+		<key>14FB4B2F-39C7-47E8-8F1D-84780B22C2C4</key>
+		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+		<key>C52A863C-9705-492B-8F8D-5F6A97F954D5</key>
+		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string></string>
+</dict>
+</plist>
