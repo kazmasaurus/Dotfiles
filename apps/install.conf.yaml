@@ -1,0 +1,5 @@
+- link:
+    ~/Library/Preferences/com.manytricks.Moom.plist:
+        create: true
+        force: true
+        path: library/preferences/com.manytricks.Moom.plist

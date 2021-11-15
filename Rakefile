@@ -44,6 +44,7 @@ end
 
 task :'apps' => [:'meta:homebrew'] do
     sh 'brew bundle --verbose --file=apps/Brewfile'
+    sh "#{dotbot} -c apps/install.conf.yaml"
 end
 
 # This is more or less the setup process
