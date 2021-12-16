@@ -33,3 +33,5 @@
 
 [credential]
 	helper = osxkeychain
+[alias]
+	push-o = push -u origin HEAD
