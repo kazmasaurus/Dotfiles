@@ -7,8 +7,12 @@
 
 - link:
     ~/.vimrc: vimrc
-    ~/.vim/ftplugin: ftplugin
-    ~/.vim/ftdetect: ftdetect
+    ~/.vim/ftplugin:
+        path: ftplugin
+        create: true
+    ~/.vim/ftdetect:
+        path: ftdetect
+        create: true
     ~/.vim/autoload/plug.vim:
         path: vim-plug/plug.vim
         create: true

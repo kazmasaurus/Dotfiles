@@ -1,6 +1,8 @@
 
 - link:
-    ~/.config/fish/config.fish: config.fish
+    ~/.config/fish/config.fish: 
+        create: true
+        path: config.fish
 
 - shell:
     # Add fish to the allowed shells
