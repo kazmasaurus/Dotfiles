@@ -1,8 +1,6 @@
 
 task :default => [:fish, :git, :vim, :xcode, :fonts, :'apps']
 
-task :install => [:'meta:mackup', :default]
-
 # Couple of things I'm still playing around with:
 # - What's the order of operations?
 #   There's at least some merrit to the idea that it should be Brewfile then install
@@ -49,16 +47,6 @@ end
 
 # This is more or less the setup process
 namespace :meta do
-
-    task :mackup => [:dropbox, :homebrew, :dotbot] do
-        sh 'brew bundle --verbose --file=meta/mackup/Brewfile'
-        sh "#{dotbot} -c meta/mackup/install.conf.yaml"
-    end
-
-    task :dropbox => [:homebrew, :dotbot] do
-        sh 'brew bundle --verbose --file=meta/dropbox/Brewfile'
-        sh "#{dotbot} -c meta/dropbox/install.conf.yaml"
-    end
 
     task :homebrew => :dotbot do
         # No brewfile, because we don't have homebrew installed yet ^_^

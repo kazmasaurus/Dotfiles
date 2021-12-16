@@ -1,8 +1,0 @@
-- shell:
-
-    -
-        command: 'open /Applications/Dropbox.app'
-        description: 'Starting Dropbox'
-    -
-        command: './setup'
-        description: 'Woiting for Dropbox if necissary.'
