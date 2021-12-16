@@ -2,6 +2,13 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>ignorevaults</key>
+	<array>
+		<string>h2vdgxmvhvhhvalubizvrzh67q</string>
+		<string>fbn5skufy5gopp3k7yuptuqg24</string>
+		<string>mutvu7e6jbxiadvnwps6rsqrza</string>
+		<string>ayg6awr5liu5recouk6zxvyqbq</string>
+	</array>
 	<key>nokeyword</key>
 	<true/>
 </dict>
