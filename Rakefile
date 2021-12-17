@@ -33,6 +33,7 @@ task :vim => [:'meta:homebrew', :'meta:dotbot', :'fish'] do
 end
 
 task :xcode => [:'meta:dotbot', :'fish'] do
+    sh 'brew bundle --verbose --file=Xcode/Brewfile'
     sh "#{dotbot} -c Xcode/install.conf.yaml"
 end
 

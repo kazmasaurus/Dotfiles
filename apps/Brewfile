@@ -20,19 +20,12 @@ mas 'Fantastical 2', id: 975937182
 mas 'Slack', id: 803453959
 mas 'Things 3', id: 904280696
 
-# Ugh: https://github.com/argon/mas/issues/19#issuecomment-214076626
-mas 'Xcode', id: 497799835
-
 # Basic dev toolkit
 brew "cloc"
 
 tap "tldr-pages/tldr"
 brew "tldr"
 
-# Apps 
+# Apps
 # Note: You'll need to `brew linkapps` when you're done
 #       This should be done by the install script though.
-
-# iOS dev tools
-brew "carthage"
-

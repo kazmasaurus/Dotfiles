@@ -1,0 +1,4 @@
+# Allows `xcodes` to download significantly faster
+brew "aria2"
+brew "robotsandpencils/made/xcodes"
+brew "carthage"
