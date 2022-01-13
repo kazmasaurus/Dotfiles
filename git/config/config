@@ -26,12 +26,16 @@
 	smudge = git-lfs smudge %f
 	required = true
 
-# Park work specific config in it's own spot.
-# [includeIf "gitdir:~/Code/Work/"]
-# 	path = ~/Code/Work/.gitconfig
-
-
 [credential]
 	helper = osxkeychain
 [alias]
 	push-o = push -u origin HEAD
+
+[include]
+  path = ~/.config/git/config-local
+
+# Park work specific config stuff in `config-local`
+# Example:
+# [includeIf "gitdir:~/Code/Work/"]
+# 	path = ~/Code/Work/.gitconfig
+

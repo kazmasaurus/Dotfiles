@@ -10,3 +10,7 @@ eval (hub alias -s)
 
 # Load `direnv`
 direnv hook fish | source
+
+# Editor
+set --export VISUAL nova
+set --export EDITOR $VISUAL
