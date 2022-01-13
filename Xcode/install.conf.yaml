@@ -1,6 +1,10 @@
 - link:
-    ~/.config/fish/functions:
-        path: fish_functions/*
+    ~/Library/Developer/Xcode/UserData/:
+        path: UserData/*
         create: true
+        force: true
         glob: true
 
+# I would kind of like to include ~/Library/Preferences/com.apple.dt.Xcode.plist,
+# but looks like it includes a ton of state that get's updated as Xcode is used,
+# so instead I'm going to skip it and see how painful it is to do without it 🤷‍♀️
