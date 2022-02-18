@@ -18,22 +18,22 @@ task :default => [:fish, :git, :vim, :xcode, :fonts, :'apps']
 dotbot = 'env SHELL=/bin/bash meta/dotbot/bin/dotbot'
 
 task :fish => [:'meta:homebrew', :'meta:dotbot'] do
-    sh 'brew bundle --verbose --file=fish/Brewfile'
+    brew_bundle('fish')
     sh "#{dotbot} -c fish/install.conf.yaml"
 end
 
 task :git => [:'meta:homebrew', :'meta:dotbot', :'fish'] do
-    sh 'brew bundle --verbose --file=git/Brewfile'
+    brew_bundle('git')
     sh "#{dotbot} -c git/install.conf.yaml"
 end
 
 task :vim => [:'meta:homebrew', :'meta:dotbot', :'fish'] do
-    sh 'brew bundle --verbose --file=vim/Brewfile'
+    brew_bundle('vim')
     sh "#{dotbot} -c vim/install.conf.yaml"
 end
 
 task :xcode => [:'meta:dotbot', :'fish'] do
-    sh 'brew bundle --verbose --file=Xcode/Brewfile'
+    brew_bundle('Xcode')
     sh "#{dotbot} -c Xcode/install.conf.yaml"
 end
 
@@ -42,7 +42,7 @@ task :fonts => [:'meta:dotbot'] do
 end
 
 task :'apps' => [:'meta:homebrew'] do
-    sh 'brew bundle --verbose --file=apps/Brewfile'
+    brew_bundle('apps')
     sh "#{dotbot} -c apps/install.conf.yaml"
 end
 
@@ -60,6 +60,12 @@ namespace :meta do
         # of my own, but let's just get this going first.
         sh "git submodule update --init --recursive meta/dotbot"
     end
+end
+
+def brew_bundle(directory)
+    puts "Brewing #{directory}"
+    file = File.join(directory, "Brewfile")
+    sh "brew bundle --file=#{file}", verbose: false
 end
 
 
