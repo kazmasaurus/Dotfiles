@@ -1,3 +1,3 @@
-function fast --wraps=fastlane --description 'alias fast=fastlane'
-  fastlane $argv; 
+function fast --wraps=fastlane --description 'fastlane'
+  fastlane $argv;
 end
