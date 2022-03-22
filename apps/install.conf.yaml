@@ -3,3 +3,7 @@
         create: true
         force: true
         path: library/preferences/com.manytricks.Moom.plist
+    ~/.config/fish/functions:
+        path: fish_functions/*
+        create: true
+        glob: true

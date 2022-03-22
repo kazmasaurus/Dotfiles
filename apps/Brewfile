@@ -21,6 +21,7 @@ mas 'Slack', id: 803453959
 mas 'Things 3', id: 904280696
 
 # Basic dev toolkit
+brew "bat"
 brew "cloc"
 
 tap "tldr-pages/tldr"
