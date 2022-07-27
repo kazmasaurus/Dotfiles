@@ -9,6 +9,7 @@ cask 'kaleidoscope'
 cask 'dash'
 cask 'paw'
 cask 'nova'
+cask 'mimestream'
 
 # $ mas search [app name]
 
@@ -26,6 +27,11 @@ brew "cloc"
 
 tap "tldr-pages/tldr"
 brew "tldr"
+
+# Media Toolkit
+tap "homebrew/cask-drivers"
+cask "elgato-stream-deck"
+cask "logitech-g-hub"
 
 # Apps
 # Note: You'll need to `brew linkapps` when you're done
