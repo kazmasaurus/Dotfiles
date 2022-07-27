@@ -172,39 +172,41 @@
 		<key>8ED58B47-7144-4E7B-A4B6-333CE08028EE</key>
 		<dict>
 			<key>xpos</key>
-			<integer>220</integer>
+			<real>220</real>
 			<key>ypos</key>
-			<integer>80</integer>
+			<real>80</real>
 		</dict>
 		<key>AAE2193C-E6C1-4A1C-8A17-774AF8868DCF</key>
 		<dict>
 			<key>xpos</key>
-			<integer>320</integer>
+			<real>320</real>
 			<key>ypos</key>
-			<integer>130</integer>
+			<real>130</real>
 		</dict>
 		<key>BAE05921-2534-4AF6-8BC8-AFA607F2B62A</key>
 		<dict>
 			<key>xpos</key>
-			<integer>50</integer>
+			<real>50</real>
 			<key>ypos</key>
-			<integer>210</integer>
+			<real>210</real>
 		</dict>
 		<key>CD69778A-A49B-44D1-9F54-B24359DEF8B8</key>
 		<dict>
 			<key>xpos</key>
-			<integer>50</integer>
+			<real>50</real>
 			<key>ypos</key>
-			<integer>50</integer>
+			<real>50</real>
 		</dict>
 		<key>ED6F3375-2FB7-4A1C-815D-971D8924591E</key>
 		<dict>
 			<key>xpos</key>
-			<integer>220</integer>
+			<real>220</real>
 			<key>ypos</key>
-			<integer>240</integer>
+			<real>240</real>
 		</dict>
 	</dict>
+	<key>userconfigurationconfig</key>
+	<array/>
 	<key>webaddress</key>
 	<string></string>
 </dict>
