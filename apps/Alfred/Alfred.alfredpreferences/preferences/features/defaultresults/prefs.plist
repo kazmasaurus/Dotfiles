@@ -4,6 +4,8 @@
 <dict>
 	<key>applicationFuzzyType</key>
 	<integer>1</integer>
+	<key>applicationUseKeywords</key>
+	<true/>
 	<key>fallbacks</key>
 	<array>
 		<string>features.websearch.duckduckgo.fallback</string>
