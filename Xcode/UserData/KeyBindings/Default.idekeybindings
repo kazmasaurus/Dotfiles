@@ -8,109 +8,159 @@
 		<array>
 			<dict>
 				<key>Action</key>
-				<string>performAlertEvent:</string>
+				<string>dvt_closeActiveEditorTab:</string>
 				<key>Alternate</key>
 				<string>NO</string>
 				<key>CommandID</key>
-				<string>E8BC5D85-7AB1-4677-A87C-5A7CA04725EA-6983-0000B893A2BEC8A7</string>
+				<string>Xcode.IDEKit.CmdDefinition.CloseEditorTab</string>
 				<key>Group</key>
-				<string>Xcode Menu</string>
+				<string>File Menu</string>
 				<key>GroupID</key>
-				<string>Xcode.IDEKit.MenuDefinition.Xcode</string>
+				<string>Xcode.IDEKit.MenuDefinition.Main</string>
 				<key>GroupedAlternate</key>
 				<string>NO</string>
 				<key>Keyboard Shortcut</key>
-				<string>~@!</string>
+				<string>$@W</string>
 				<key>Navigation</key>
 				<string>NO</string>
-				<key>Parent Title</key>
-				<string>Behaviors</string>
 				<key>Title</key>
-				<string>Code</string>
+				<string>Close Tab</string>
 			</dict>
 			<dict>
 				<key>Action</key>
-				<string>performAlertEvent:</string>
+				<string>_closeOtherEditorTabs:</string>
 				<key>Alternate</key>
-				<string>NO</string>
+				<string>YES</string>
 				<key>CommandID</key>
-				<string>9EDFA1D1-D76F-4F61-A7AC-15DAADDEA695-1957-00001E1659EC9770</string>
+				<string>Xcode.IDEKit.CmdDefinition.CloseOtherEditorTabs</string>
 				<key>Group</key>
-				<string>Xcode Menu</string>
+				<string>File Menu</string>
 				<key>GroupID</key>
-				<string>Xcode.IDEKit.MenuDefinition.Xcode</string>
+				<string>Xcode.IDEKit.MenuDefinition.Main</string>
 				<key>GroupedAlternate</key>
 				<string>NO</string>
 				<key>Keyboard Shortcut</key>
-				<string>~@\@</string>
+				<string>~$@W</string>
 				<key>Navigation</key>
 				<string>NO</string>
-				<key>Parent Title</key>
-				<string>Behaviors</string>
 				<key>Title</key>
-				<string>Storyboard</string>
+				<string>Close Other Tabs</string>
 			</dict>
 			<dict>
 				<key>Action</key>
-				<string>performAlertEvent:</string>
+				<string>closeOtherWindowTabs:</string>
 				<key>Alternate</key>
-				<string>NO</string>
+				<string>YES</string>
 				<key>CommandID</key>
-				<string>A00DB335-BECB-4B3F-8A78-96EDD160B722-63622-00006B405ABD6D66</string>
+				<string>Xcode.IDEKit.CmdDefinition.CloseOtherWindowTabs</string>
 				<key>Group</key>
-				<string>Xcode Menu</string>
+				<string>File Menu</string>
 				<key>GroupID</key>
-				<string>Xcode.IDEKit.MenuDefinition.Xcode</string>
+				<string>Xcode.IDEKit.MenuDefinition.Main</string>
 				<key>GroupedAlternate</key>
 				<string>NO</string>
 				<key>Keyboard Shortcut</key>
-				<string>~@\#</string>
+				<string>~@w</string>
 				<key>Navigation</key>
 				<string>NO</string>
-				<key>Parent Title</key>
-				<string>Behaviors</string>
 				<key>Title</key>
-				<string>Debug</string>
+				<string>Close Other Window Tabs</string>
 			</dict>
 			<dict>
 				<key>Action</key>
-				<string>performAlertEvent:</string>
+				<string>dvt_closeWindowAsWindowTab:</string>
 				<key>Alternate</key>
 				<string>NO</string>
 				<key>CommandID</key>
-				<string>4913CE6A-4766-4835-8087-449E1B2CD36E-63622-00006B6102FBD226</string>
+				<string>Xcode.IDEKit.CmdDefinition.CloseWindowTab</string>
 				<key>Group</key>
-				<string>Xcode Menu</string>
+				<string>File Menu</string>
 				<key>GroupID</key>
-				<string>Xcode.IDEKit.MenuDefinition.Xcode</string>
+				<string>Xcode.IDEKit.MenuDefinition.Main</string>
 				<key>GroupedAlternate</key>
 				<string>NO</string>
 				<key>Keyboard Shortcut</key>
-				<string>~@\$</string>
+				<string>@w</string>
 				<key>Navigation</key>
 				<string>NO</string>
-				<key>Parent Title</key>
-				<string>Behaviors</string>
 				<key>Title</key>
-				<string>Build</string>
+				<string>Close Window Tab</string>
 			</dict>
 			<dict>
 				<key>Action</key>
-				<string>showOrganizer:</string>
+				<string>_showNextEditorTab:</string>
 				<key>Alternate</key>
 				<string>NO</string>
 				<key>CommandID</key>
-				<string>Xcode.IDEKit.CmdDefinition.Organizer</string>
+				<string>Xcode.IDEKit.CmdDefinition.ShowNextEditorTab</string>
+				<key>Group</key>
+				<string>Navigate Menu</string>
+				<key>GroupID</key>
+				<string>Xcode.IDEKit.MenuDefinition.Main</string>
+				<key>GroupedAlternate</key>
+				<string>NO</string>
+				<key>Navigation</key>
+				<string>YES</string>
+				<key>Title</key>
+				<string>Show Next Tab</string>
+			</dict>
+			<dict>
+				<key>Action</key>
+				<string>selectNextTab:</string>
+				<key>Alternate</key>
+				<string>NO</string>
+				<key>CommandID</key>
+				<string>Xcode.IDEKit.CmdDefinition.ShowNextWindowTab</string>
 				<key>Group</key>
 				<string>Window Menu</string>
 				<key>GroupID</key>
 				<string>Xcode.IDEKit.MenuDefinition.Main</string>
 				<key>GroupedAlternate</key>
 				<string>NO</string>
+				<key>Keyboard Shortcut</key>
+				<string>@}</string>
 				<key>Navigation</key>
 				<string>NO</string>
 				<key>Title</key>
-				<string>Organizer</string>
+				<string>Show Next Window Tab</string>
+			</dict>
+			<dict>
+				<key>Action</key>
+				<string>_showPreviousEditorTab:</string>
+				<key>Alternate</key>
+				<string>NO</string>
+				<key>CommandID</key>
+				<string>Xcode.IDEKit.CmdDefinition.ShowPreviousEditorTab</string>
+				<key>Group</key>
+				<string>Navigate Menu</string>
+				<key>GroupID</key>
+				<string>Xcode.IDEKit.MenuDefinition.Main</string>
+				<key>GroupedAlternate</key>
+				<string>NO</string>
+				<key>Navigation</key>
+				<string>YES</string>
+				<key>Title</key>
+				<string>Show Previous Tab</string>
+			</dict>
+			<dict>
+				<key>Action</key>
+				<string>selectPreviousTab:</string>
+				<key>Alternate</key>
+				<string>NO</string>
+				<key>CommandID</key>
+				<string>Xcode.IDEKit.CmdDefinition.ShowPreviousWindowTab</string>
+				<key>Group</key>
+				<string>Window Menu</string>
+				<key>GroupID</key>
+				<string>Xcode.IDEKit.MenuDefinition.Main</string>
+				<key>GroupedAlternate</key>
+				<string>NO</string>
+				<key>Keyboard Shortcut</key>
+				<string>@{</string>
+				<key>Navigation</key>
+				<string>NO</string>
+				<key>Title</key>
+				<string>Show Previous Window Tab</string>
 			</dict>
 		</array>
 		<key>Version</key>
