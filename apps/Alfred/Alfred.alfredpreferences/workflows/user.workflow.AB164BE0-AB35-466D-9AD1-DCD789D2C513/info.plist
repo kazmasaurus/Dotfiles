@@ -8,6 +8,19 @@
 	<string>Productivity</string>
 	<key>connections</key>
 	<dict>
+		<key>03F8C9CD-E3CB-414B-8C4C-4FA1211B85D4</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>D27EF9EB-FEB7-4136-84B3-6680272C3BCC</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>AEAA328B-07C2-46F1-97DA-BCA5900DF425</key>
 		<array>
 			<dict>
@@ -61,6 +74,21 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>availableviaurlhandler</key>
+				<false/>
+				<key>triggerid</key>
+				<string>Craft</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>E1A1AEEE-88D3-4353-AA1A-ABD5ACC5E320</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>paths</key>
 				<array>
 					<string>/Applications/Craft.app</string>
@@ -72,21 +100,6 @@
 			<string>alfred.workflow.action.launchfiles</string>
 			<key>uid</key>
 			<string>C1C6411F-CC58-40E7-9F68-96E0F54A7722</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>availableviaurlhandler</key>
-				<false/>
-				<key>triggerid</key>
-				<string>Craft</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.external</string>
-			<key>uid</key>
-			<string>E1A1AEEE-88D3-4353-AA1A-ABD5ACC5E320</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -143,6 +156,38 @@
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>paths</key>
+				<array>
+					<string>/Applications/Slack.app</string>
+				</array>
+				<key>toggle</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.launchfiles</string>
+			<key>uid</key>
+			<string>D27EF9EB-FEB7-4136-84B3-6680272C3BCC</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>availableviaurlhandler</key>
+				<false/>
+				<key>triggerid</key>
+				<string>Slack</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>03F8C9CD-E3CB-414B-8C4C-4FA1211B85D4</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string>To hide the actual version of the app:
@@ -157,6 +202,13 @@ You may also need to (but I don't believe so):
 	tell application "Finder" to set comment of (POSIX file "PATH" as alias) to "alfred:ignore"</string>
 	<key>uidata</key>
 	<dict>
+		<key>03F8C9CD-E3CB-414B-8C4C-4FA1211B85D4</key>
+		<dict>
+			<key>xpos</key>
+			<real>135</real>
+			<key>ypos</key>
+			<real>485</real>
+		</dict>
 		<key>AEAA328B-07C2-46F1-97DA-BCA5900DF425</key>
 		<dict>
 			<key>xpos</key>
@@ -170,6 +222,13 @@ You may also need to (but I don't believe so):
 			<real>365</real>
 			<key>ypos</key>
 			<real>40</real>
+		</dict>
+		<key>D27EF9EB-FEB7-4136-84B3-6680272C3BCC</key>
+		<dict>
+			<key>xpos</key>
+			<real>365</real>
+			<key>ypos</key>
+			<real>485</real>
 		</dict>
 		<key>DBB7C342-5E0B-4253-952D-6469427008E2</key>
 		<dict>
