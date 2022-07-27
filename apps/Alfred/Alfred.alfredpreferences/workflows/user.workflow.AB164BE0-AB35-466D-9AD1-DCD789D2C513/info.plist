@@ -3,12 +3,12 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string>com.kazmasaurus.alfred.things</string>
+	<string>com.kazmasaurus.alfred.jumper</string>
 	<key>category</key>
 	<string>Productivity</string>
 	<key>connections</key>
 	<dict>
-		<key>08470601-2B00-4FC4-AC96-6E038B243C29</key>
+		<key>AEAA328B-07C2-46F1-97DA-BCA5900DF425</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
@@ -21,11 +21,11 @@
 				<false/>
 			</dict>
 		</array>
-		<key>AEAA328B-07C2-46F1-97DA-BCA5900DF425</key>
+		<key>E1A1AEEE-88D3-4353-AA1A-ABD5ACC5E320</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>DBB7C342-5E0B-4253-952D-6469427008E2</string>
+				<string>C1C6411F-CC58-40E7-9F68-96E0F54A7722</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -51,13 +51,45 @@
 	<key>createdby</key>
 	<string>Zak</string>
 	<key>description</key>
-	<string>Open it</string>
+	<string>Open things</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Things</string>
+	<string>Jumper</string>
 	<key>objects</key>
 	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>paths</key>
+				<array>
+					<string>/Applications/Craft.app</string>
+				</array>
+				<key>toggle</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.launchfiles</string>
+			<key>uid</key>
+			<string>C1C6411F-CC58-40E7-9F68-96E0F54A7722</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>availableviaurlhandler</key>
+				<false/>
+				<key>triggerid</key>
+				<string>Craft</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>E1A1AEEE-88D3-4353-AA1A-ABD5ACC5E320</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -72,27 +104,6 @@
 			<string>alfred.workflow.action.launchfiles</string>
 			<key>uid</key>
 			<string>DBB7C342-5E0B-4253-952D-6469427008E2</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>things</string>
-				<key>subtext</key>
-				<string>What's next?</string>
-				<key>text</key>
-				<string>Things</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>08470601-2B00-4FC4-AC96-6E038B243C29</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -146,33 +157,40 @@ You may also need to (but I don't believe so):
 	tell application "Finder" to set comment of (POSIX file "PATH" as alias) to "alfred:ignore"</string>
 	<key>uidata</key>
 	<dict>
-		<key>08470601-2B00-4FC4-AC96-6E038B243C29</key>
-		<dict>
-			<key>xpos</key>
-			<real>135</real>
-			<key>ypos</key>
-			<real>185</real>
-		</dict>
 		<key>AEAA328B-07C2-46F1-97DA-BCA5900DF425</key>
 		<dict>
 			<key>xpos</key>
 			<real>135</real>
 			<key>ypos</key>
-			<real>345</real>
+			<real>185</real>
+		</dict>
+		<key>C1C6411F-CC58-40E7-9F68-96E0F54A7722</key>
+		<dict>
+			<key>xpos</key>
+			<real>365</real>
+			<key>ypos</key>
+			<real>40</real>
 		</dict>
 		<key>DBB7C342-5E0B-4253-952D-6469427008E2</key>
 		<dict>
 			<key>xpos</key>
-			<real>355</real>
+			<real>365</real>
 			<key>ypos</key>
 			<real>185</real>
+		</dict>
+		<key>E1A1AEEE-88D3-4353-AA1A-ABD5ACC5E320</key>
+		<dict>
+			<key>xpos</key>
+			<real>135</real>
+			<key>ypos</key>
+			<real>40</real>
 		</dict>
 		<key>EA37DC11-5E3D-447A-9106-A8E436909288</key>
 		<dict>
 			<key>xpos</key>
 			<real>135</real>
 			<key>ypos</key>
-			<real>510</real>
+			<real>335</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
