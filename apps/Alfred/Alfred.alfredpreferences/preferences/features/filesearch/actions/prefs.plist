@@ -11,5 +11,7 @@
 		<key>string</key>
 		<string>&lt;</string>
 	</dict>
+	<key>showWithTab</key>
+	<true/>
 </dict>
 </plist>
