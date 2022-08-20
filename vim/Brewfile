@@ -1,1 +1,2 @@
-brew "macvim", link: true
+brew "neovim"
+cask "vimr"
