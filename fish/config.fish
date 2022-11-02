@@ -12,5 +12,5 @@ eval (hub alias -s)
 direnv hook fish | source
 
 # Editor
-set --export VISUAL nova
+set --export VISUAL nova -w
 set --export EDITOR $VISUAL
