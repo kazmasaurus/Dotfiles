@@ -21,6 +21,12 @@
         create: true
         glob: true
 
+    ~/.config/nvim:
+        path: config/*
+        create: true
+        glob: true
+
+
 - shell:
     -
       command: 'vim +PlugInstall +q +q'
