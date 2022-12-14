@@ -20,6 +20,7 @@ mas 'Day One', id: 1055511498
 mas 'Fantastical 2', id: 975937182
 mas 'Slack', id: 803453959
 mas 'Things 3', id: 904280696
+mas 'Tot', id: 1491071483
 
 # Basic dev toolkit
 brew "bat"
