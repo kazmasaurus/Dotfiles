@@ -93,7 +93,8 @@
 				<key>escaping</key>
 				<integer>127</integer>
 				<key>script</key>
-				<string>rm -rf ~/Library/Developer/Xcode/DerivedData/*
+				<string>killall Xcode
+rm -rf ~/Library/Developer/Xcode/DerivedData
 rm -rf ~/Library/Caches/com.apple.dt.Xcode/*
 
 # This service seems to keep an in memory cache of simulator locations, which will
@@ -121,25 +122,27 @@ sudo killall -9 com.apple.CoreSimulator.CoreSimulatorService</string>
 		<key>0A9E4032-D3D5-43DC-B055-B6A0D2FA7E77</key>
 		<dict>
 			<key>xpos</key>
-			<integer>700</integer>
+			<real>700</real>
 			<key>ypos</key>
-			<real>10</real>
+			<real>15</real>
 		</dict>
 		<key>14FB4B2F-39C7-47E8-8F1D-84780B22C2C4</key>
 		<dict>
 			<key>xpos</key>
-			<integer>300</integer>
+			<real>300</real>
 			<key>ypos</key>
-			<real>10</real>
+			<real>15</real>
 		</dict>
 		<key>C52A863C-9705-492B-8F8D-5F6A97F954D5</key>
 		<dict>
 			<key>xpos</key>
-			<integer>500</integer>
+			<real>500</real>
 			<key>ypos</key>
-			<real>10</real>
+			<real>15</real>
 		</dict>
 	</dict>
+	<key>userconfigurationconfig</key>
+	<array/>
 	<key>webaddress</key>
 	<string></string>
 </dict>
