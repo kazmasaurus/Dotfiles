@@ -32,7 +32,13 @@
 	push-o = push -u origin HEAD
 
 [include]
-  path = ~/.config/git/config-local
+  	path = ~/.config/git/config-local
+
+[init]
+	defaultBranch = main
+
+[push]
+	autoSetupRemote = true
 
 # Park work specific config stuff in `config-local`
 # Example:

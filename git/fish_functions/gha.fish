@@ -1,4 +1,4 @@
-function gha --wraps 'gh'
-    gh --all $argv
+function gha --wraps 'gho'
+    gho --all $argv
 end
 
