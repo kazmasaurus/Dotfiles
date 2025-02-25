@@ -1,9 +1,9 @@
 - link:
-    ~/Library/Preferences/com.manytricks.Moom.plist:
-        create: true
-        force: true
-        path: library/preferences/com.manytricks.Moom.plist
     ~/.config/fish/functions:
         path: fish_functions/*
         create: true
         glob: true
+- shell:
+        -
+            command: "killall Moom; defaults import com.manytricks.Moom Moom-Starter.plist; open -a Moom"
+            description: Import Moom settings

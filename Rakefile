@@ -63,6 +63,11 @@ namespace :meta do
 end
 
 def brew_bundle(directory)
+    # Bail early if this is a work account. Currently trying
+    # https://www.codejam.info/2021/11/homebrew-multi-user.html
+    # which assumes that brew setup has probably already happened
+    return unless `whoami` == "me"
+
     puts "Brewing #{directory}"
     file = File.join(directory, "Brewfile")
     sh "brew bundle --file=#{file}", verbose: false
