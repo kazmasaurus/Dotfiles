@@ -6,9 +6,6 @@
     -
         command: 'brew --version || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"'
         description: Installing Homebrew
-    -
-        command: "brew tap homebrew/bundle"
-        description: Installing Brewfileabilityness
 
     # Update Homebrew if we're just touching up
     -

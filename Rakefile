@@ -1,5 +1,5 @@
 
-task :default => [:fish, :git, :vim, :xcode, :fonts, :'apps']
+task :default => [:fish, :git, :xcode, :fonts, :'apps']
 
 # Couple of things I'm still playing around with:
 # - What's the order of operations?
@@ -66,7 +66,9 @@ def brew_bundle(directory)
     # Bail early if this is a work account. Currently trying
     # https://www.codejam.info/2021/11/homebrew-multi-user.html
     # which assumes that brew setup has probably already happened
-    return unless `whoami` == "me"
+    #
+    # Doesn't handle work computers, only works for multiple accounts on personal computer
+    # return unless `whoami` == "me"
 
     puts "Brewing #{directory}"
     file = File.join(directory, "Brewfile")
